@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "f49cc942-1ae0-4796-aa7f-d0eeaae9d8a9",
+		"name": "Pelicula API",
+		"description": "Collection for testing Pelicula API endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26434356"
+	},
+	"item": [
+		{
+			"name": "Get All Peliculas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas"
+					]
+				},
+				"description": "Retrieve all peliculas"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Pelicula by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"1"
+					]
+				},
+				"description": "Retrieve a specific pelicula by ID"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Pelicula",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Nueva Película\",\n    \"director\": \"Nuevo Director\",\n    \"year\": 2023,\n    \"synopsis\": \"Sinopsis de la nueva película\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas"
+					]
+				},
+				"description": "Create a new pelicula"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Pelicula",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Película Actualizada\",\n    \"director\": \"Director Actualizado\",\n    \"year\": 2024,\n    \"synopsis\": \"Sinopsis actualizada de la película\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"1"
+					]
+				},
+				"description": "Update an existing pelicula"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Pelicula",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/peliculas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"peliculas",
+						"1"
+					]
+				},
+				"description": "Delete a pelicula by ID"
+			},
+			"response": []
+		}
+	]
+}
